@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Code Quiz</title>
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Code Quiz</h1>
+    </header>
+    <main class="card" id="card">
+        <section class="instructions" id="instructions">
+            <h2>Instructions</h2>
+            <p>
+                Hello! Ready to begin the JavaScript Code Quiz!?  This is a timed multiple choice quiz that will require your JavaScript knowledge.  
+                Please note: Incorrect answers will result in a time deducted penalty.  Good luck! You can retake the quiz to beat your orginal score!
+            </p>
+            <p>
+                Okay, Lets go!  Press the START button to begin!
+            </p>
+            <div class="start">
+                <button class="btn" id="start-btn">START</button>
+            </div>
+        </section>
+        <div class="feedback hide"></div>
+        <section class="quiz-container hide">
+            <h2 class="question-header"></h2>
+            <div class="question"></div>
+            <div class="answer-grid ">
+                <div class="answer-grid-item">
+                    <button class="btn" id="btn-a" value="a"></button>
+                </div>
+                <div class="answer-grid-item">
+                    <button class="btn" id="btn-b" value="b"></button>
+                </div>
+                <div class="answer-grid-item">
+                    <button class="btn" id="btn-c" value="c"></button>
+                </div>
+                <div class="answer-grid-item">
+                    <button class="btn" id="btn-d" value="d"></button>
+                </div>
+            </div>
+        </section>
+        <section class="end">
+        </section>
+    </main>
+    <footer>
+        <div class="scores-container">
+            <div class="high-score">
+                <a href="./score-calculator.html">View Score Summary</a>
+            </div>
+            <div class="score"></div>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
