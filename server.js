@@ -3,7 +3,7 @@ const express = require('express');
 
 // Point Server to the route files
 const apiRoutes = require('./routes/apiRoutes');
-const htmlRoutes = require('./routes/htmlRoutes');
+const htmlRoutes = require('./routes/htmlroutes');
 
 // Create an express server
 const app = express();
@@ -22,13 +22,7 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('client/build'));
-}
-
-app.get('*', (request, response) => {
-	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+let port = process.env.PORT ||8080;
 
 // Listener
 app.listen(PORT, () => {
